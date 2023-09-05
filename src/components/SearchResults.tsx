@@ -12,7 +12,7 @@ interface UserStorage {
 export const SearchResults = () => { // {userId}: {userId: string}
   const [queryUsers, setQueryUsers] = useState<UserStorage[]>([])
   const [lastIndex, setLastIndex] = useState(0)
-  const [focusBackground, setFocusBackground] = useState(false)
+  // const [focusBackground, setFocusBackground] = useState(false)
   const dispatch = useDispatch();
   const updatedStorage = useSelector(storageSelector);
 
@@ -30,15 +30,15 @@ export const SearchResults = () => { // {userId}: {userId: string}
   const handleSelectSearch = (id: string) => {
     // TODO: Generar un hash único por cada búsqueda para no mezclar resultado por tipo_doc y numero_doc
     console.log(id);
-    setFocusBackground(true); // TODO: AGREGAR CUANDO SE SELECCIONA UNA BÚSQUEDA,
+    // setFocusBackground(true); // TODO: AGREGAR CUANDO SE SELECCIONA UNA BÚSQUEDA,
     // DEBERÍA QUEDAR SOLO UNO MARCADO.
   }
 
 
-  const handleRemoveResult = (id: string) => {
-    console.log('Delete userId:', id);
-    // TODO: Debe cerrarse la sesión después de 5min a menos que el promotor la cierre antes
-  }
+  // const handleRemoveResult = (id: string) => {
+  //   console.log('Delete userId:', id);
+  //   // TODO: Debe cerrarse la sesión después de 5min a menos que el promotor la cierre antes
+  // }
   
   return (
     <div className="search__results">
